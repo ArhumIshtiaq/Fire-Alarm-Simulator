@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src=".\Alarm.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class='block'>
+    <button style="text-decoration:none; font-family:Verdana; font-size: 18px; color: blue" id="simulator">Run Simulation</button>
+    <script>
+      $(document).ready(
+        $(simulator).click(function(){
+          location.reload()
+        }) 
+      ) 
+      $(document).ready(
+        alert(v)
+      )
+    </script>
+    <style>
+      body {
+        background-color: #877e76;
+      }
+      .block {
+        border-radius: 10px; 
+        width: 163px;
+        background-color: burlywood;
+        margin: 300px 700px 300px 500px;
+        padding: 10px 10px 10px 10px;
+      }
+      #simulator {
+        border-radius: 10%;
+        position: relative;
+        padding: 10px 10px 10px 10px;
+       }
+     </style>
+</body>
+
+</html>

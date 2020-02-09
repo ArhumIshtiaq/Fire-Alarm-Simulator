@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<!--script src="D:\Google Drive\Programming Projects\Websites\Fire Alarm Simulator\Alarm.js"></script-->
+<link href="https://bootswatch.com/4/superhero/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="https://bootswatch.com/4/superhero/bootstrap.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet/less" type="text/css" href="https://bootswatch.com/superhero/4/bootswatch.less" />
+<link rel="stylesheet/less" type="text/css" href="https://bootswatch.com/superhero/4/variables.less" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<head>
+    <title>Alarm Simulator</title>
+</head>
+
+<body>
+    <a style="margin: 425px 500px 0px 555px" class="btn btn-primary btn-lg">Run Simulation</a>
+    <script>
+        var s, h,
+            valassign = function() {
+                s = Math.round(Math.random()),
+                    h = Math.round(Math.random())
+                if (s) {
+                    if (h) {
+                        return true
+                    } else if (!(h)) {
+                        alert("Smoke Alert!")
+                    } else {
+                        return false
+                    }
+                } else if (h) {
+                    if (!(s)) {
+                        alert("High Temperature Warning")
+                    }
+                    return false
+                }
+            }
+
+        if (valassign()) {
+            var alert1 = confirm("Fire Alert!")
+        } else {
+            v = "House is fine"
+        }
+
+        console.log(s + "/" + h)
+        $(document).ready(
+            $("a").click(function() {
+                location.reload()
+            })
+        )
+        $(document).ready(
+            alert(v)
+        )
+    </script>
+</body>
+
+</html>
